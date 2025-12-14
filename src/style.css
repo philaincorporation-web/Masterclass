@@ -11,8 +11,24 @@ body {
   align-items: center;
   justify-content: center;
   background: url('public/Bourses-Canal+Gabon AFFICHE .jpg') no-repeat center/cover;
+  position: relative;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('public/Bourses-Canal+Gabon AFFICHE .jpg') no-repeat center/cover;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
 .container {
   width: 90%;
   max-width: 900px;
@@ -26,7 +42,10 @@ body {
 
 .left {
   padding: 40px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(20,
+    63,
+    139,
+    0.31);
 }
 
 .left h1 {
@@ -41,7 +60,7 @@ body {
 
 .right {
   padding: 40px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(20, 63, 139, 0.31);
 }
 
 .right h2 {
@@ -144,7 +163,7 @@ button:disabled {
 }
 
 .social span:hover {
-  background: rgba(184, 129, 201, 0.2);
+  background: rgba(107, 86, 114, 0.2);
 }
 
 /* Responsive */
