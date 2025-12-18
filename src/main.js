@@ -1,9 +1,8 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
-
 import { setupCounter } from './counter.js'
 
-// Remplacez par votre URL SheetDB API
+// URL SheetDB
 const SHEETDB_API_URL = 'https://sheetdb.io/api/v1/h2p4g7aw76i97';
 
 document.querySelector('#app').innerHTML = `
@@ -12,17 +11,20 @@ document.querySelector('#app').innerHTML = `
       <div class="left">
         <h1>Inscription</h1>
         <p>Masterclass exclusives :</p>
-        
       </div>
+
       <div class="right">
         <h2>Régistre de présence!</h2>
+
         <form id="signupForm">
           <div class="field">
             <input type="text" id="nom" placeholder="Nom" required />
           </div>
+
           <div class="field">
             <input type="text" id="prenom" placeholder="Prénom" required />
           </div>
+
           <div class="field">
             <select id="statut" required>
               <option value="">Sélectionnez votre statut</option>
@@ -31,140 +33,128 @@ document.querySelector('#app').innerHTML = `
               <option value="Entrepreneur">Entrepreneur</option>
             </select>
           </div>
+
           <div class="field">
-            <label class="checkbox-label">Masterclass souhaitées <span style="color:#aaa;font-size:0.9em">(au moins 1)</span> :</label>
+            <label class="checkbox-label">
+              Masterclass souhaitées 
+              <span style="color:#aaa;font-size:0.9em">(au moins 1)</span> :
+            </label>
+
             <div class="checkbox-group">
               <label class="checkbox-item">
-                <input type="checkbox" name="masterclass" value=" De la créativité au business digital">
+                <input type="checkbox" name="masterclass" value="De la créativité au business digital">
                 <span class="checkmark"></span> De la créativité au business digital
               </label>
+
               <label class="checkbox-item">
-                <input type="checkbox" name="masterclass" value=" IA & Personal Branding">
+                <input type="checkbox" name="masterclass" value="IA & Personal Branding">
                 <span class="checkmark"></span> IA & Personal Branding
               </label>
+
               <label class="checkbox-item">
-                <input type="checkbox" name="masterclass" value=" IA & Contrôle parental">
+                <input type="checkbox" name="masterclass" value="IA & Contrôle parental">
                 <span class="checkmark"></span> IA & Contrôle parental
               </label>
+
               <label class="checkbox-item">
                 <input type="checkbox" name="masterclass" value="Santé mentale">
                 <span class="checkmark"></span> Santé mentale
               </label>
             </div>
           </div>
+
           <button type="submit" id="submitBtn">S'enregistrer</button>
         </form>
+
         <div id="message" class="message"></div>
+
+        <!-- 🔗 RÉSEAUX SOCIAUX -->
         <div class="social">
-  <a href="https://www.facebook.com/femmedigitaleafrique">
-    <span class="social-icon facebook">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-      </svg>
-    </span>
-  </a>
-  
-  <a href="https://www.digiewomenawards.com/" target="_blank" rel="noopener noreferrer" title="Digie Women Awards">
-  <span class="social-icon website">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="10"></circle>
-    <line x1="2" y1="12" x2="22" y2="12"></line>
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-  </svg>
-</span>
 
+          <a href="https://www.facebook.com/femmedigitaleafrique" target="_blue">
+            <span class="social-icon facebook">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="16" cy="16" r="14" fill="url(#paint0_linear_87_7208)"></circle> <path d="M21.2137 20.2816L21.8356 16.3301H17.9452V13.767C17.9452 12.6857 18.4877 11.6311 20.2302 11.6311H22V8.26699C22 8.26699 20.3945 8 18.8603 8C15.6548 8 13.5617 9.89294 13.5617 13.3184V16.3301H10V20.2816H13.5617V29.8345C14.2767 29.944 15.0082 30 15.7534 30C16.4986 30 17.2302 29.944 17.9452 29.8345V20.2816H21.2137Z" fill="white"></path> <defs> <linearGradient id="paint0_linear_87_7208" x1="16" y1="2" x2="16" y2="29.917" gradientUnits="userSpaceOnUse"> <stop stop-color="#18ACFE"></stop> <stop offset="1" stop-color="#0163E0"></stop> </linearGradient> </defs> </g></svg>
+            </span>
+          </a>
 
+          <a href="https://www.digiewomenawards.com/" target="_white">
+            <span class="social-icon website">
+              <svg fill="#ffffff" viewBox="0 0 512 512" id="_x30_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M418.275,146h-46.667 c-5.365-22.513-12.324-43.213-20.587-61.514c15.786,8.776,30.449,19.797,43.572,32.921C403.463,126.277,411.367,135.854,418.275,146 z M452,256c0,17.108-2.191,33.877-6.414,50h-64.034c1.601-16.172,2.448-32.887,2.448-50s-0.847-33.828-2.448-50h64.034 C449.809,222.123,452,238.892,452,256z M256,452c-5.2,0-21.048-10.221-36.844-41.813c-6.543-13.087-12.158-27.994-16.752-44.187 h107.191c-4.594,16.192-10.208,31.1-16.752,44.187C277.048,441.779,261.2,452,256,452z M190.813,306 c-1.847-16.247-2.813-33.029-2.813-50s0.966-33.753,2.813-50h130.374c1.847,16.247,2.813,33.029,2.813,50s-0.966,33.753-2.813,50 H190.813z M60,256c0-17.108,2.191-33.877,6.414-50h64.034c-1.601,16.172-2.448,32.887-2.448,50s0.847,33.828,2.448,50H66.414 C62.191,289.877,60,273.108,60,256z M256,60c5.2,0,21.048,10.221,36.844,41.813c6.543,13.087,12.158,27.994,16.752,44.187H202.404 c4.594-16.192,10.208-31.1,16.752-44.187C234.952,70.221,250.8,60,256,60z M160.979,84.486c-8.264,18.301-15.222,39-20.587,61.514 H93.725c6.909-10.146,14.812-19.723,23.682-28.593C130.531,104.283,145.193,93.262,160.979,84.486z M93.725,366h46.667 c5.365,22.513,12.324,43.213,20.587,61.514c-15.786-8.776-30.449-19.797-43.572-32.921C108.537,385.723,100.633,376.146,93.725,366z M351.021,427.514c8.264-18.301,15.222-39,20.587-61.514h46.667c-6.909,10.146-14.812,19.723-23.682,28.593 C381.469,407.717,366.807,418.738,351.021,427.514z"></path></g></svg>
+            </span>
+          </a>
 
-  </a>
-  
-  <a href="https://www.linkedin.com/showcase/digiewomen-awards/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-    <span class="social-icon linkedin">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-      </svg>
-    </span>
-  </a>
-  
-  <a href="https://whatsapp.com/channel/0029Vb6foT6EQIaoB06z8m1F" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-    <span class="social-icon whatsapp">
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-      </svg>
-    </span>
-  </a>
-</div>
+          <a href="https://www.linkedin.com/showcase/digiewomen-awards/" target="_blue">
+            <span class="social-icon linkedin">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="24" cy="24" r="20" fill="#0077B5"></circle> <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7747 14.2839C18.7747 15.529 17.8267 16.5366 16.3442 16.5366C14.9194 16.5366 13.9713 15.529 14.0007 14.2839C13.9713 12.9783 14.9193 12 16.3726 12C17.8267 12 18.7463 12.9783 18.7747 14.2839ZM14.1199 32.8191V18.3162H18.6271V32.8181H14.1199V32.8191Z" fill="white"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2393 22.9446C22.2393 21.1357 22.1797 19.5935 22.1201 18.3182H26.0351L26.2432 20.305H26.3322C26.9254 19.3854 28.4079 17.9927 30.8101 17.9927C33.7752 17.9927 35.9995 19.9502 35.9995 24.219V32.821H31.4922V24.7838C31.4922 22.9144 30.8404 21.6399 29.2093 21.6399C27.9633 21.6399 27.2224 22.4999 26.9263 23.3297C26.8071 23.6268 26.7484 24.0412 26.7484 24.4574V32.821H22.2411V22.9446H22.2393Z" fill="white"></path> </g></svg>
+            </span>
+          </a>
 
+          <a href="https://whatsapp.com/channel/0029Vb6foT6EQIaoB06z8m1F" target="_green">
+            <span>
+       <svg width="191px" height="191px" viewBox="-102.4 -102.4 1228.80 1228.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff" stroke-width="0.01024" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(179.2,179.2), scale(0.65)"><rect x="-102.4" y="-102.4" width="1228.80" height="1228.80" rx="614.4" fill="#7ed0ec" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="2.048"></g><g id="SVGRepo_iconCarrier"> <defs> <path id="a" d="M1023.941 765.153c0 5.606-.171 17.766-.508 27.159-.824 22.982-2.646 52.639-5.401 66.151-4.141 20.306-10.392 39.472-18.542 55.425-9.643 18.871-21.943 35.775-36.559 50.364-14.584 14.56-31.472 26.812-50.315 36.416-16.036 8.172-35.322 14.426-55.744 18.549-13.378 2.701-42.812 4.488-65.648 5.3-9.402.336-21.564.505-27.15.505l-504.226-.081c-5.607 0-17.765-.172-27.158-.509-22.983-.824-52.639-2.646-66.152-5.4-20.306-4.142-39.473-10.392-55.425-18.542-18.872-9.644-35.775-21.944-50.364-36.56-14.56-14.584-26.812-31.471-36.415-50.314-8.174-16.037-14.428-35.323-18.551-55.744-2.7-13.378-4.487-42.812-5.3-65.649-.334-9.401-.503-21.563-.503-27.148l.08-504.228c0-5.607.171-17.766.508-27.159.825-22.983 2.646-52.639 5.401-66.151 4.141-20.306 10.391-39.473 18.542-55.426C34.154 93.24 46.455 76.336 61.07 61.747c14.584-14.559 31.472-26.812 50.315-36.416 16.037-8.172 35.324-14.426 55.745-18.549 13.377-2.701 42.812-4.488 65.648-5.3 9.402-.335 21.565-.504 27.149-.504l504.227.081c5.608 0 17.766.171 27.159.508 22.983.825 52.638 2.646 66.152 5.401 20.305 4.141 39.472 10.391 55.425 18.542 18.871 9.643 35.774 21.944 50.363 36.559 14.559 14.584 26.812 31.471 36.415 50.315 8.174 16.037 14.428 35.323 18.551 55.744 2.7 13.378 4.486 42.812 5.3 65.649.335 9.402.504 21.564.504 27.15l-.082 504.226z"></path> </defs> <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="512.001" y1=".978" x2="512.001" y2="1025.023"> <stop offset="0" stop-color="#61fd7d"></stop> <stop offset="1" stop-color="#2bb826"></stop> </linearGradient> <use xlink:href="#a" overflow="visible" fill="url(#b)"></use> <g> <path fill="#FFF" d="M783.302 243.246c-69.329-69.387-161.529-107.619-259.763-107.658-202.402 0-367.133 164.668-367.214 367.072-.026 64.699 16.883 127.854 49.017 183.522l-52.096 190.229 194.665-51.047c53.636 29.244 114.022 44.656 175.482 44.682h.151c202.382 0 367.128-164.688 367.21-367.094.039-98.087-38.121-190.319-107.452-259.706zM523.544 808.047h-.125c-54.767-.021-108.483-14.729-155.344-42.529l-11.146-6.612-115.517 30.293 30.834-112.592-7.259-11.544c-30.552-48.579-46.688-104.729-46.664-162.379.066-168.229 136.985-305.096 305.339-305.096 81.521.031 158.154 31.811 215.779 89.482s89.342 134.332 89.312 215.859c-.066 168.243-136.984 305.118-305.209 305.118zm167.415-228.515c-9.177-4.591-54.286-26.782-62.697-29.843-8.41-3.062-14.526-4.592-20.645 4.592-6.115 9.182-23.699 29.843-29.053 35.964-5.352 6.122-10.704 6.888-19.879 2.296-9.176-4.591-38.74-14.277-73.786-45.526-27.275-24.319-45.691-54.359-51.043-63.543-5.352-9.183-.569-14.146 4.024-18.72 4.127-4.109 9.175-10.713 13.763-16.069 4.587-5.355 6.117-9.183 9.175-15.304 3.059-6.122 1.529-11.479-.765-16.07-2.293-4.591-20.644-49.739-28.29-68.104-7.447-17.886-15.013-15.466-20.645-15.747-5.346-.266-11.469-.322-17.585-.322s-16.057 2.295-24.467 11.478-32.113 31.374-32.113 76.521c0 45.147 32.877 88.764 37.465 94.885 4.588 6.122 64.699 98.771 156.741 138.502 21.892 9.45 38.982 15.094 52.308 19.322 21.98 6.979 41.982 5.995 57.793 3.634 17.628-2.633 54.284-22.189 61.932-43.615 7.646-21.427 7.646-39.791 5.352-43.617-2.294-3.826-8.41-6.122-17.585-10.714z"></path> </g> </g></svg>
+            </span>
+          </a>
+
+        </div>
       </div>
     </div>
   </div>
-`
+`;
 
-// Gestion du formulaire
+/* ===== FONCTION ANTI-DOUBLON ===== */
+async function isAlreadyRegistered(nom, prenom) {
+  const url = `${SHEETDB_API_URL}/search?Nom=${encodeURIComponent(nom)}&Prenom=${encodeURIComponent(prenom)}`;
+  const response = await fetch(url);
+  const result = await response.json();
+  return result.length > 0;
+}
+
+/* ===== FORMULAIRE ===== */
 const form = document.getElementById('signupForm');
 const messageDiv = document.getElementById('message');
 const submitBtn = document.getElementById('submitBtn');
 
-form.addEventListener('submit', async function(e) {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  
-  // Récupération des valeurs
+
   const nom = document.getElementById('nom').value.trim();
   const prenom = document.getElementById('prenom').value.trim();
   const statut = document.getElementById('statut').value;
-  
-  // Récupération PRÉCISE des masterclass cochées AVEC EMOJIS
+
   const masterclassCheckboxes = document.querySelectorAll('input[name="masterclass"]:checked');
-  const masterclassArray = Array.from(masterclassCheckboxes).map(cb => cb.value);
-  const masterclassSelection = masterclassArray.join(' | '); // Séparateur clair
-  
-  console.log('Masterclass sélectionnées:', masterclassArray); // Debug
-  
-  // Validation
-  if (!nom || !prenom || !statut) {
-    showMessage('❌ Veuillez remplir tous les champs obligatoires.', 'error');
+  const masterclassSelection = [...masterclassCheckboxes].map(cb => cb.value).join(' | ');
+
+  if (!nom || !prenom || !statut || masterclassCheckboxes.length === 0) {
+    showMessage('❌ Veuillez remplir tous les champs.', 'error');
     return;
   }
-  
-  if (masterclassCheckboxes.length === 0) {
-    showMessage('❌ Sélectionnez au moins une masterclass.', 'error');
-    return;
-  }
-  
-  // Désactiver le bouton
+
   submitBtn.disabled = true;
   submitBtn.textContent = 'Enregistrement...';
-  
+
   try {
-    // DONNÉES ENVOYÉES À SHEETDB
-    const data = {
-      Nom: nom,
-      Prenom: prenom,
-      Statut: statut,
-      Masterclass: masterclassSelection,  // ✅ ARRIVE COMME ÇA DANS VOTRE SHEET
-      Date: new Date().toLocaleString('fr-FR')  // Bonus: date d'inscription
-    };
-    
-    console.log('Données envoyées:', data); // Debug
-    
-    // Envoi à SheetDB
-    const response = await fetch(SHEETDB_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    });
-    
-    if (response.ok) {
-      showMessage(`✅ Enregistrement ! ${prenom} ${nom}\nMasterclass: ${masterclassSelection}`, 'success');
-      form.reset();
-    } else {
-      throw new Error(`Erreur ${response.status}`);
+    if (await isAlreadyRegistered(nom, prenom)) {
+      showMessage(`⚠️ ${prenom} ${nom}, vous êtes déjà enregistré(e).`, 'error');
+      return;
     }
-    
-  } catch (error) {
-    console.error('Erreur:', error);
-    showMessage('❌ Erreur enregistrement. Réessayez.', 'error');
+
+    await fetch(SHEETDB_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        Nom: nom,
+        Prenom: prenom,
+        Statut: statut,
+        Masterclass: masterclassSelection,
+        Date: new Date().toLocaleString('fr-FR')
+      })
+    });
+
+    showMessage(`✅ Inscription réussie ${prenom} ${nom}`, 'success');
+    form.reset();
+
+  } catch {
+    showMessage('❌ Erreur lors de l’enregistrement.', 'error');
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = "S'enregistrer";
@@ -174,10 +164,7 @@ form.addEventListener('submit', async function(e) {
 function showMessage(text, type) {
   messageDiv.textContent = text;
   messageDiv.className = `message ${type}`;
-  setTimeout(() => {
-    messageDiv.textContent = '';
-    messageDiv.className = 'message';
-  }, 7000);
+  setTimeout(() => messageDiv.textContent = '', 7000);
 }
 
-setupCounter(document.querySelector('#counter'))
+setupCounter(document.querySelector('#counter'));
