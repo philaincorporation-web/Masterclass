@@ -9,8 +9,8 @@ document.querySelector('#app').innerHTML = `
   <div>
     <div class="container">
       <div class="left">
-        <h1>Inscription</h1>
-        <p>Masterclass exclusives :</p>
+        <h1>Bienvenue à notre Masterclass</h1>
+     
       </div>
 
       <div class="right">
@@ -35,33 +35,37 @@ document.querySelector('#app').innerHTML = `
           </div>
 
           <div class="field">
-            <label class="checkbox-label">
-              Masterclass souhaitées 
-              <span style="color:#aaa;font-size:0.9em">(au moins 1)</span> :
-            </label>
+  <label class="checkbox-label">
+    Masterclass souhaitées 
+    <span class="required-note">(Choix multiple)</span> :
+  </label>
 
-            <div class="checkbox-group">
-              <label class="checkbox-item">
-                <input type="checkbox" name="masterclass" value="De la créativité au business digital">
-                <span class="checkmark"></span> De la créativité au business digital
-              </label>
+  <div class="masterclass-table">
+    <div class="table-header">
+      <div class="col-selector"></div>
+      <div class="col-title">Masterclass</div>
+    </div>
+    
+    <label class="table-row checkbox-item">
+      <input type="checkbox" name="masterclass" value="De la créativité au business digital">
+      <span class="checkmark"></span>
+      <span class="row-title">De la créativité au business digital / IA & Personal Branding</span>
+    </label>
 
-              <label class="checkbox-item">
-                <input type="checkbox" name="masterclass" value="IA & Personal Branding">
-                <span class="checkmark"></span> IA & Personal Branding
-              </label>
+    <label class="table-row checkbox-item">
+      <input type="checkbox" name="masterclass" value="IA & Contrôle parental">
+      <span class="checkmark"></span>
+      <span class="row-title">IA & Contrôle parental</span>
+    </label>
 
-              <label class="checkbox-item">
-                <input type="checkbox" name="masterclass" value="IA & Contrôle parental">
-                <span class="checkmark"></span> IA & Contrôle parental
-              </label>
+    <label class="table-row checkbox-item">
+      <input type="checkbox" name="masterclass" value="Santé mentale">
+      <span class="checkmark"></span>
+      <span class="row-title">Santé mentale</span>
+    </label>
+  </div>
+</div>
 
-              <label class="checkbox-item">
-                <input type="checkbox" name="masterclass" value="Santé mentale">
-                <span class="checkmark"></span> Santé mentale
-              </label>
-            </div>
-          </div>
 
           <button type="submit" id="submitBtn">S'enregistrer</button>
         </form>
@@ -150,7 +154,7 @@ form.addEventListener('submit', async (e) => {
       })
     });
 
-    showMessage(`✅ Inscription réussie ${prenom} ${nom}`, 'success');
+    showMessage(`✅ Enregistrement. réussie ${prenom} ${nom}`, 'success');
     form.reset();
 
   } catch {
